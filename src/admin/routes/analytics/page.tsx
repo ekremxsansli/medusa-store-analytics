@@ -25,8 +25,11 @@ import { DateLasts, DropdownOrderStatus, OrderStatus, convertDateLastsToCompared
 import { Grid } from "@mui/material";
 import { ComparedDate, SelectDateLasts, SwitchComparison } from '../../../ui-components/common/overview-components';
 import ProTab from '../../../ui-components/tabs/pro';
+import { useTranslation } from "react-i18next"
 
 const AnalyticsPage = () => {
+
+  const {t} = useTranslation();
   const [dateLast, setDateLasts] = useState<DateLasts>(DateLasts.LastWeek);
   const [compareEnabled, setCompare] = useState<boolean>(true)
   const [orderStatuses, setOrderStatuses] = useState<OrderStatus[]>([OrderStatus.COMPLETED, OrderStatus.PENDING])
@@ -75,7 +78,7 @@ const AnalyticsPage = () => {
       <Grid item xs={12} md={12}>
         <Tabs defaultValue='overview'>
           <Tabs.List style={ { justifyContent: 'center' } }>
-            <Tabs.Trigger value='overview'>Overview</Tabs.Trigger>
+            <Tabs.Trigger value='overview'>Overview{t("taxes-new-tax-rate")}</Tabs.Trigger>
             <Tabs.Trigger value='sales'>Sales</Tabs.Trigger>
             <Tabs.Trigger value='orders'>Orders</Tabs.Trigger>
             <Tabs.Trigger value='customers'>Customers</Tabs.Trigger>
