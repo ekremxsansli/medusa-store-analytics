@@ -78,7 +78,7 @@ const AnalyticsPage = () => {
       <Grid item xs={12} md={12}>
         <Tabs defaultValue='overview'>
           <Tabs.List style={ { justifyContent: 'center' } }>
-            <Tabs.Trigger value='overview'>Overview{t("taxes-new-tax-rate")}</Tabs.Trigger>
+            <Tabs.Trigger value='overview'>Overview{t("taxes-new-tax-rate","TETET")}</Tabs.Trigger>
             <Tabs.Trigger value='sales'>Sales</Tabs.Trigger>
             <Tabs.Trigger value='orders'>Orders</Tabs.Trigger>
             <Tabs.Trigger value='customers'>Customers</Tabs.Trigger>
