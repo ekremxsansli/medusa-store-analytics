@@ -113,7 +113,7 @@ const AnalyticsPage = () => {
 }
 export const config: RouteConfig = {
   link: {
-    label: "Analytics",
+    label: "Dashboard",
     icon: LightBulb,
   },
 }
